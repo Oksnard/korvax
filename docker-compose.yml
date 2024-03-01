@@ -1,0 +1,15 @@
+version: '3'
+services:
+  express_app:
+    build:
+      context: node-api
+      dockerfile: Dockerfile
+    ports:
+      - 3000:3000
+
+  vue_app:
+    build:
+      context: vue-client
+      dockerfile: Dockerfile
+    ports:
+      - 8080:8080
